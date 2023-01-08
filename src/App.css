@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&family=Signika:wght@500&display=swap');
+
+:root {
+  --bgcolorone : #1C1C1C;
+  --bgcolortwo : #23252C;
+  --bgcolorthree: #1A1B21;
+  --colorblue: #5093E2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--bgcolorthree);
+  color: white;
+  font-family: 'Radio Canada', sans-serif;
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  max-width: 940px;
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+form{
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.feedback label{
+  display: block;
+}
+
+textarea{
+  resize: vertical;
+}
+
+.cbox{
+  display: inline-block;
+}
+
+.inp{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+input[type=text]{
+  margin-left: 1rem;
+}
+
+.inp{
+  margin-bottom: 1rem;
+}
+
+.inp:nth-child(1) input[type=text]{
+  width: 65%;
+}
+.inp:nth-child(2) input[type=text]{
+  width: 65%;
+}
+.inp:nth-child(3) input[type=tel]{
+  width: 65%;
+}
+.inp:nth-child(4) input[type=email]{
+  width: 65%;
+}
+
+.inp input[type=text],input[type=email],input[type=tel]{
+  border-radius: 50px;
+  height: 2rem;
+  padding: 1rem;
+}
+
+button{
+  display: block;
+  margin: 0 auto;
+  width: 6rem;
+  height: 2rem;
+  border-radius: 50px;
+}
+
+textarea{
+  width: 65%;
 }
